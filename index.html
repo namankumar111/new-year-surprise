@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="c:\Users\naman\Downloads\happier (lo-fi instrumental).mp3" type="audio/mpeg">
+</audio>
+
+<div class="bg"></div>
+
+<section class="screen active" id="screen1">
+  <h1 class="title pink">A little surprise for you</h1>
+  <p class="subtitle">Before this year begins</p>
+  <div class="hold-wrapper">
+    <div class="hold-area" id="holdCircle">
+      <svg class="progress-ring" width="160" height="160">
+        <circle class="progress-ring__circle" stroke="#ff85a2" stroke-width="8" fill="transparent" r="70" cx="80" cy="80"/>
+      </svg>
+      <div class="heart-icon">❤️</div>
+    </div>
+    <p class="hold-text">Tap and hold</p>
+  </div>
+</section>
+
+<section class="screen" id="screen2">
+  <h1 class="title">Something is waiting for you</h1>
+  <p class="subtitle">Move the little distractions aside</p>
+  <div class="cards-wrapper">
+    <div class="gift-box" id="giftBox">🎁</div>
+    
+    <div class="draggable-card blue-card" style="--rotation: -8deg">
+      <span class="card-icon">📍</span><p>Distance</p>
+    </div>
+    <div class="draggable-card yellow-card" style="--rotation: 5deg">
+      <span class="card-icon">🧠</span><p>Stress</p>
+    </div>
+    <div class="draggable-card orange-card" style="--rotation: -3deg">
+      <span class="card-icon">💼</span><p>Work</p>
+    </div>
+    <div class="draggable-card pink-card" style="--rotation: 2deg">
+      <span class="card-icon">🌧️</span><p>Bad Days</p>
+    </div>
+  </div>
+  <canvas id="particles"></canvas>
+</section>
+
+<section class="screen" id="screen3">
+  <div class="ticket-container">
+    <div class="ticket-outer">
+      <div class="ticket-inner">
+        <div class="ticket-icon-gold">🎫</div>
+        <h2 class="ticket-title">GOLDEN TICKET</h2>
+        <div class="divider"></div>
+        <p class="ticket-valid">VALID FOR EVERY DAY AHEAD</p>
+        <p class="ticket-quote">"Unlimited Love & Smiles"</p>
+        <p class="ticket-no-exp">No expiration date</p>
+      </div>
+      <div class="shine"></div>
+    </div>
+    <button id="claim" class="claim-btn">CLAIM TICKET ></button>
+  </div>
+</section>
+
+<section class="screen" id="screen4">
+  <h1 class="title pink">For my Cutiepie :)</h1>
+  <p class="subtitle">Tap the card to read</p>
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <img src="c:\Users\naman\OneDrive\Pictures\newyearcard.jpg" alt="Front Cover">
+      </div>
+      <div class="flip-back">
+        <div class="scroll-box">
+          <p>I hope this year brings you calm mornings, peaceful nights, and little moments that make you smile without any reason.</p>
+          <p>No matter what this year holds for you, I hope you always feel supported, valued, and understood. May every challenge turn into strength, and every quiet day remind you of how special you truly are.</p>
+          <p>You deserve a year filled with happiness, with moments that feel light, warm, and meaningful.</p>
+          <p>May this year be gentle with you, and give you everything your heart has been hoping for.</p>
+          <p>Wishing you a very beautiful New Year 🎊💓</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="credits">
+  Made with 💓 by Naman<br>
+  <span>@namankumar</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
