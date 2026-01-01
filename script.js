@@ -11,6 +11,10 @@ function showScreen(n) {
 /* 1. PROGRESS RING LOGIC */
 let holdVal = 440, timer;
 function startHold() {
+  function startHold(e) {
+  if (e) e.preventDefault();
+}
+holdArea.addEventListener("touchstart", startHold, { passive: false });
   timer = setInterval(() => {
     holdVal -= 4; // Fill speed
     if (holdVal <= 0) {
@@ -33,6 +37,17 @@ document.querySelectorAll(".draggable-card").forEach(card => {
   let isDragging = false, startX, startY;
   
   const startDrag = (e) => {
+    const startDrag = (e) => {
+  e.preventDefault(); // Screen drag rokne ke liye
+  isDragging = true;
+  // ...
+};
+
+const moveDrag = (e) => {
+  if (!isDragging) return;
+  e.preventDefault(); // Card move karte waqt screen na hile
+  // ...
+};
     isDragging = true;
     card.style.zIndex = 500;
     const t = e.type.includes('touch') ? e.touches[0] : e;
@@ -96,4 +111,5 @@ document.getElementById("giftBox").onclick = () => {
 document.getElementById("claim").onclick = () => showScreen(3);
 document.querySelector(".flip-inner").onclick = function() {
   document.querySelector(".flip-card").classList.toggle("flipped");
+
 };
