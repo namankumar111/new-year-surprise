@@ -52,13 +52,53 @@ body { height:100vh; overflow:hidden; background: #050008; color:white; font-fam
 .gift-box { width: 90px; height: 90px; background: #ff4d6d; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 45px; box-shadow: 0 0 25px rgba(255, 77, 109, 0.6); z-index: 1; cursor: pointer; }
 
 /* SCREEN 3: TICKET FIX */
-.ticket-outer { background: #121821; border: 2px solid #d4af37; border-radius: 20px; padding: 10px; position: relative; overflow: hidden; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-.ticket-inner { border: 1px dashed #d4af37; padding: 25px; border-radius: 12px; }
-.ticket-title { color: #d4af37; letter-spacing: 2px; }
-.shine { position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent); transform: skewX(-25deg); animation: shine 3s infinite; }
-@keyframes shine { to { left: 200%; } }
-.claim-btn { background: none; border: none; color: #888; margin-top: 25px; cursor: pointer; }
+/* Ticket Screen ko center karne ke liye */
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+/* Ticket Box ka design aur niche margin (Gap ke liye) */
+.ticket-outer { 
+    background: #121821; 
+    border: 2px solid #d4af37; /* Gold border */
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+    margin-bottom: 40px; /* Isse button niche jayega aur gap dikhega */
+}
+
+.ticket-inner { 
+    border: 1px dashed #d4af37; 
+    padding: 25px; 
+    border-radius: 12px; 
+}
+
+.ticket-title { color: #d4af37; letter-spacing: 2px; }
+
+/* Claim Button ko premium banane aur click fix karne ke liye */
+.claim-btn { 
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #d4af37; 
+    color: #e0e0e0;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1000; /* Click fix: Taaki particles ke upar rahe */
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.claim-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-3px); /* Chota sa upar uthne wala effect */
+}
 /* SCREEN 4: SCROLL FIX */
 .flip-card { width: 300px; height: 420px; perspective: 1000px; margin-top: 15px; }
 .flip-inner { width: 100%; height: 100%; transition: transform 0.8s; transform-style: preserve-3d; cursor: pointer; }
@@ -84,3 +124,4 @@ body { height:100vh; overflow:hidden; background: #050008; color:white; font-fam
   animation: fadeInSmooth 1s ease forwards;
 
 }
+
