@@ -1,3 +1,30 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none; /* Screen scroll block karne ke liye */
+}
+
+/* Draggable cards ke liye */
+.draggable-card {
+  touch-action: none;
+}
+
+/* Sirf message box mein scroll allow karein */
+.scroll-box {
+  -webkit-user-select: text;
+  user-select: text;
+  touch-action: pan-y;
+}
+
 * { margin:0; padding:0; box-sizing:border-box; }
 body { height:100vh; overflow:hidden; background: #050008; color:white; font-family:"Shantell Sans", cursive; }
 
@@ -55,4 +82,5 @@ body { height:100vh; overflow:hidden; background: #050008; color:white; font-fam
 }
 .screen.active {
   animation: fadeInSmooth 1s ease forwards;
+
 }
